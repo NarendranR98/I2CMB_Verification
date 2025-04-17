@@ -1,0 +1,588 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 14:28:37 on Feb 24,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+Creating library 'qrun.out/work'.
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:28:38 on Feb 24,2024
+vlog -msglimit error -msglimitcount 20 -covermultiuserenv ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv ../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv ../testbench/top.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=0 
+-- Compiling interface wb_if
+-- Compiling interface i2c_if
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 14:28:39 on Feb 24,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:28:39 on Feb 24,2024
+vcom -msglimit error -msglimitcount 20 -covermultiuserenv ../rtl/iicmb_int_pkg.vhd ../rtl/iicmb_pkg.vhd ../rtl/mbyte.vhd ../rtl/mbit.vhd ../rtl/bus_state.vhd ../rtl/filter.vhd ../rtl/conditioner.vhd ../rtl/conditioner_mux.vhd ../rtl/iicmb_m.vhd ../rtl/regblock.vhd ../rtl/wishbone.vhd ../rtl/iicmb_m_wb.vhd -work qrun.out/work -autoorder -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=1 
+-- Loading package STANDARD
+-- Scanning package iicmb_int_pkg
+-- Scanning package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Scanning package iicmb_pkg
+-- Scanning package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Scanning entity mbyte
+-- Scanning architecture rtl of mbyte
+-- Scanning entity mbit
+-- Scanning architecture rtl of mbit
+-- Scanning entity bus_state
+-- Scanning architecture rtl of bus_state
+-- Scanning entity filter
+-- Scanning architecture rtl of filter
+-- Scanning entity conditioner
+-- Scanning architecture str of conditioner
+-- Scanning entity conditioner_mux
+-- Scanning architecture str of conditioner_mux
+-- Scanning entity iicmb_m
+-- Scanning architecture str of iicmb_m
+-- Scanning entity regblock
+-- Scanning architecture rtl of regblock
+-- Scanning entity wishbone
+-- Scanning architecture rtl of wishbone
+-- Scanning entity iicmb_m_wb
+-- Scanning architecture str of iicmb_m_wb
+End time: 14:28:40 on Feb 24,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:28:40 on Feb 24,2024
+vcom -refresh_marked -work qrun.out/work -csession=incr -statslog qrun.out/stats_log 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bus_state
+-- Compiling architecture rtl of bus_state
+-- Compiling entity conditioner
+-- Compiling architecture str of conditioner
+-- Compiling entity conditioner_mux
+-- Compiling architecture str of conditioner_mux
+-- Compiling entity filter
+-- Compiling architecture rtl of filter
+-- Compiling package iicmb_int_pkg
+-- Compiling package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity iicmb_m
+-- Compiling architecture str of iicmb_m
+-- Compiling entity iicmb_m_wb
+-- Compiling architecture str of iicmb_m_wb
+-- Compiling package iicmb_pkg
+-- Compiling package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Compiling entity mbit
+-- Compiling architecture rtl of mbit
+-- Loading package iicmb_pkg
+-- Compiling entity mbyte
+-- Compiling architecture rtl of mbyte
+-- Compiling entity regblock
+-- Compiling architecture rtl of regblock
+-- Compiling entity wishbone
+-- Compiling architecture rtl of wishbone
+End time: 14:28:41 on Feb 24,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:28:41 on Feb 24,2024
+vopt -msglimit error -msglimitcount 20 -debug,livesim -designfile design.bin top -work qrun.out/work -statslog qrun.out/stats_log -o qrun_opt -csession=incr -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Loading interface wb_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading interface i2c_if
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 19 design-units (inlining 2/3 module instances, 9/11 architecture instances):
+-- Inlining interface wb_if(fast__1)
+-- Inlining interface i2c_if(fast__1)
+-- Optimizing module top(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing interface wb_if(fast)
+-- Inlining architecture rtl of mbyte
+-- Inlining architecture rtl of mbit
+-- Inlining architecture rtl of filter
+-- Inlining architecture rtl of bus_state
+-- Inlining architecture str of conditioner
+-- Inlining architecture str of conditioner_mux
+-- Optimizing architecture str of iicmb_m
+-- Inlining architecture rtl of wishbone
+-- Inlining architecture rtl of regblock
+-- Optimizing architecture str of iicmb_m_wb
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+viscom:
+VISCOM: Start time: 14:28:44 on Feb 24,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/../linux_x86_64/VisualizerRls/bin/viscom 2023.4 at 2023.10 Oct  9 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 14:28:45 on Feb 24,2024, Elapsed time: 0:00:01 (Process Size : 379MB, Peak Process Size : 381MB)
+
+
+Optimized design name is qrun_opt
+End time: 14:28:45 on Feb 24,2024, Elapsed time: 0:00:04
+Errors: 0, Warnings: 0
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'nrangar'
+# Mentor Graphics software version 2023.4 (Build on Oct  9 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do} -statslog qrun.out/stats_log qrun_opt -appendlog -l run.log -csession=incr -csessionid=3
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -appendlog -csession=incr -csessionid=3 "+no_qwavedb_threading" 
+# Start time: 14:29:17 on Feb 24,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+
+# Initiating qwavedb class logging
+
+
+# Done initiating qwavedb class logging
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+
+# 14:29:22: Loading design data...
+# 14:29:23: Loaded  design units
+# 14:29:23: Loaded  design hierarchy
+# set IterationLimit 140000
+# 140000
+# set NoQuitOnFinish 1
+# 1
+# coverage attribute -name TESTNAME -value test_top
+
+# coverage save -onexit test_top.ucdb
+
+# do wave.do
+# 14:29:27: Loading waveform header...
+# 14:29:27: Loaded  waveform header
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Static tasks and functions will be logged.
+# Qwave threading will not be used.
+# 	Arrays of 1 unpacked dimension inside classes will be logged if they have 1024 or fewer elements
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.4 (Build number 0)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 	Arrays of 1 unpacked dimension will be logged if they have 1024 or fewer elements
+# QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+
+# Now the Core is enabled.
+# Task 1: Write 32 incrementing values, from 0 to 31, to the i2c_bus
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 16             Data:   0
+#           Address: 16             Data:   1
+#           Address: 16             Data:   2
+#           Address: 16             Data:   3
+#           Address: 16             Data:   4
+#           Address: 16             Data:   5
+#           Address: 16             Data:   6
+#           Address: 16             Data:   7
+#           Address: 16             Data:   8
+#           Address: 16             Data:   9
+#           Address: 16             Data:  10
+#           Address: 16             Data:  11
+#           Address: 16             Data:  12
+#           Address: 16             Data:  13
+#           Address: 16             Data:  14
+#           Address: 16             Data:  15
+#           Address: 16             Data:  16
+#           Address: 16             Data:  17
+#           Address: 16             Data:  18
+#           Address: 16             Data:  19
+#           Address: 16             Data:  20
+#           Address: 16             Data:  21
+#           Address: 16             Data:  22
+#           Address: 16             Data:  23
+#           Address: 16             Data:  24
+#           Address: 16             Data:  25
+#           Address: 16             Data:  26
+#           Address: 16             Data:  27
+#           Address: 16             Data:  28
+#           Address: 16             Data:  29
+#           Address: 16             Data:  30
+#           Address: 16             Data:  31
+# Task 2: Read 32 values from the i2c_bus • Return incrementing data from 100 to 1
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data: 100
+#           Address: 2c             Data: 101
+#           Address: 2c             Data: 102
+#           Address: 2c             Data: 103
+#           Address: 2c             Data: 104
+#           Address: 2c             Data: 105
+#           Address: 2c             Data: 106
+#           Address: 2c             Data: 107
+#           Address: 2c             Data: 108
+#           Address: 2c             Data: 109
+#           Address: 2c             Data: 110
+#           Address: 2c             Data: 111
+#           Address: 2c             Data: 112
+#           Address: 2c             Data: 113
+#           Address: 2c             Data: 114
+#           Address: 2c             Data: 115
+#           Address: 2c             Data: 116
+#           Address: 2c             Data: 117
+#           Address: 2c             Data: 118
+#           Address: 2c             Data: 119
+#           Address: 2c             Data: 120
+#           Address: 2c             Data: 121
+#           Address: 2c             Data: 122
+#           Address: 2c             Data: 123
+#           Address: 2c             Data: 124
+#           Address: 2c             Data: 125
+#           Address: 2c             Data: 126
+#           Address: 2c             Data: 127
+#           Address: 2c             Data: 128
+#           Address: 2c             Data: 129
+#           Address: 2c             Data: 130
+#           Address: 2c             Data: 131
+# 
+# Task 3: Alternate writes and reads for 64 transfers:
+# 
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  64
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  63
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  65
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  62
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  66
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  61
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  67
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  60
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  68
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  59
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  69
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  58
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  70
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  57
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  71
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  56
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  72
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  55
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  73
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  54
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  74
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  53
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  75
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  52
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  76
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  51
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  77
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  50
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  78
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  49
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  79
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  48
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  80
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  47
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  81
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  46
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  82
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  45
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  83
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  44
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  84
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  43
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  85
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  42
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  86
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  41
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  87
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  40
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  88
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  39
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  89
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  38
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  90
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  37
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  91
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  36
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  92
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  35
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  93
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  34
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  94
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  33
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  95
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  32
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  96
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  31
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  97
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  30
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  98
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  29
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data:  99
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  28
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 100
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  27
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 101
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  26
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 102
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  25
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 103
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  24
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 104
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  23
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 105
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  22
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 106
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  21
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 107
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  20
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 108
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  19
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 109
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  18
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 110
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  17
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 111
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  16
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 112
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  15
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 113
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  14
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 114
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  13
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 115
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  12
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 116
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  11
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 117
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:  10
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 118
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   9
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 119
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   8
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 120
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   7
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 121
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   6
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 122
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   5
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 123
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   4
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 124
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   3
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 125
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   2
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 126
+# ========== I2C_BUS READ  Transfer ==========
+#           Address: 2c             Data:   1
+# ========== I2C_BUS WRITE Transfer ==========
+#           Address: 22             Data: 127
+# ** Note: $finish    : ../testbench/top.sv(110)
+#    Time: 31323795 ns  Iteration: 3  Instance: .top
+# Stopped at ../testbench/top.sv line 110
+# Break in Module top at ../testbench/top.sv line 110
+# Window layout 'Default' saved in file: /mnt/ncsudrive/n/nrangar/.visualizer/layout.xml
+# Saving coverage database on exit...
+# qwavedb_dumpvars : Simulation ending at [0 3132379500] 0
+# ========= Visualizer Dump Summary report =========
+# 	 #Design Ids       = 148
+# 	 #Assertion Ids    = 4
+# 	 #Message Ids      = 2
+# 	 #Total Ids        = 159
+# 	 #Swaps            = 14
+# 	  Id Memory        = 15.26 KB
+# 	  Swap Memory      = 50.00 MB
+# ========= End of Visualizer Dump Summary report =========
+# End time: 14:37:15 on Feb 24,2024, Elapsed time: 0:07:58
+# Errors: 0, Warnings: 0
+
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vcom: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   0
+#     vsim: Errors:   0, Warnings:   0
+#   Totals: Errors:   0, Warnings:   0
+# Start  : Sat 24 Feb 2024 02:28:51 PM EST
+# End    : Sat 24 Feb 2024 02:37:15 PM EST
+# VMSize : 1450744 kB
+# VMPeak : 1507084 kB

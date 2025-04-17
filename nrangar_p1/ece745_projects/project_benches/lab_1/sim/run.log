@@ -1,0 +1,187 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 15:48:43 on Feb 19,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 15:48:43 on Feb 19,2024
+vlog -msglimit error -msglimitcount 20 -covermultiuserenv ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv ../testbench/top.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=0 
+-- Skipping ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 15:48:43 on Feb 19,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+-- Skipping 'vcom -64 -msglimit error -msglimitcount 20 -covermultiuseren...'
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 15:48:44 on Feb 19,2024
+vopt -msglimit error -msglimitcount 20 -debug,livesim -designfile design.bin top -work qrun.out/work -statslog qrun.out/stats_log -o qrun_opt -csession=incr -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Loading interface wb_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 17 design-units (inlining 1/2 module instances, 9/11 architecture instances):
+-- Inlining interface wb_if(fast__1)
+-- Optimizing module top(fast)
+-- Optimizing interface wb_if(fast)
+-- Inlining architecture rtl of mbyte
+-- Inlining architecture rtl of mbit
+-- Inlining architecture rtl of filter
+-- Inlining architecture rtl of bus_state
+-- Inlining architecture str of conditioner
+-- Inlining architecture str of conditioner_mux
+-- Optimizing architecture str of iicmb_m
+-- Inlining architecture rtl of wishbone
+-- Inlining architecture rtl of regblock
+-- Optimizing architecture str of iicmb_m_wb
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+viscom:
+VISCOM: Start time: 15:48:45 on Feb 19,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/../linux_x86_64/VisualizerRls/bin/viscom 2023.4 at 2023.10 Oct  9 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 15:48:47 on Feb 19,2024, Elapsed time: 0:00:02 (Process Size : 379MB, Peak Process Size : 381MB)
+
+
+Optimized design name is qrun_opt
+End time: 15:48:47 on Feb 19,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'nrangar'
+# Mentor Graphics software version 2023.4 (Build on Oct  9 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do} -statslog qrun.out/stats_log qrun_opt -appendlog -l run.log -csession=incr -csessionid=3
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -appendlog -csession=incr -csessionid=3 "+no_qwavedb_threading" 
+# Start time: 15:49:17 on Feb 19,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+
+# Initiating qwavedb class logging
+
+
+# Done initiating qwavedb class logging
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+
+# 15:49:21: Loading design data...
+# 15:49:21: Loaded  design units
+# 15:49:21: Loaded  design hierarchy
+# set IterationLimit 140000
+# 140000
+# set NoQuitOnFinish 1
+# 1
+# coverage attribute -name TESTNAME -value test_top
+
+# coverage save -onexit test_top.ucdb
+
+# do wave.do
+# 15:49:29: Loading waveform header...
+# 15:49:29: Loaded  waveform header
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Static tasks and functions will be logged.
+# Qwave threading will not be used.
+# 	Arrays of 1 unpacked dimension inside classes will be logged if they have 1024 or fewer elements
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.4 (Build number 0)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 	Arrays of 1 unpacked dimension will be logged if they have 1024 or fewer elements
+# QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+
+# ============== transaction at                    0 ns ==============
+# addr: 0 data: 00 we: 0
+
+# stop -sync -abort
+
+# Window layout 'Default' saved in file: /mnt/ncsudrive/n/nrangar/.visualizer/layout.xml
+# Saving coverage database on exit...
+# qwavedb_dumpvars : Simulation ending at [0 602056000] 0
+# ========= Visualizer Dump Summary report =========
+# 	 #Design Ids       = 130
+# 	 #Assertion Ids    = 3
+# 	 #Message Ids      = 1
+# 	 #Total Ids        = 139
+# 	 #Swaps            = 7
+# 	  Id Memory        = 13.34 KB
+# 	  Swap Memory      = 50.00 MB
+# ========= End of Visualizer Dump Summary report =========
+# End time: 15:53:43 on Feb 19,2024, Elapsed time: 0:04:26
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   0
+#     vsim: Errors:   0, Warnings:   0
+#   Totals: Errors:   0, Warnings:   0
+# Start  : Mon 19 Feb 2024 03:48:54 PM EST
+# End    : Mon 19 Feb 2024 03:53:43 PM EST
+# VMSize : 1453372 kB
+# VMPeak : 1453376 kB
